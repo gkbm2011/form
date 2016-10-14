@@ -53,7 +53,9 @@
 			$contents = $iframe.contents();
 		
 		$contents.find('input#submit').click(function(){
-			setInterval(function(){console.log($iframe.src);}, 100);
+			setInterval(function(){
+				console.log(document.getElementById("form").src);
+			}, 100);
 		});
 	});
 </script>
