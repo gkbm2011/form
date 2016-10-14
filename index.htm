@@ -67,7 +67,8 @@
 		
 		if(!lock){
 			if(iFrameID) {
-				iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+				var height = iFrameID.contentWindow.document.body.scrollHeight + 30;
+				iFrameID.height = height + "px";
 				document.getElementById("show").innerHTML = "";
 				console.log(iFrameID.contentWindow.document.body.scrollHeight);
 			}
