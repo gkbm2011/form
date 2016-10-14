@@ -82,7 +82,7 @@
 <br><br>
 
 <script language="javascript">
-
+window.praent.changeLock(true);
 	$('input#submit').prop('disabled', true);
 	
 	$("input#agree").change(function() {
@@ -209,7 +209,6 @@
 				$(this).submit();
 				return false;
 			}else{
-				window.praent.changeLock(true);
 				return true;
 			}
 		}
