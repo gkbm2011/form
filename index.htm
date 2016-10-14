@@ -8,18 +8,19 @@
   .mid{
       vertical-align:middle;
   }
-	.use-transform{
+	.use-flexbox{
+		display:flex;
+		align-items:center;
+		justify-content:center;
 		width:100%;
 		height:100%;
 	}
-	.use-transform div{
-		position: relative;
+	
+	/*.use-flexbox div{
 		width:500px;
 		height:200px;
-		top:50%;
-		margin:0 auto;
-		transform:translateY(-50%);
-	}
+		background:#099;
+	}*/
 </style>
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -27,10 +28,10 @@
 </head>
 
 <body>
-	<div class="use-transform">
+	<div class="use-flexbox">
 		<div>
 			<img src="./image/logo.png" class="mid">
-			<span style="font-size:500%; font-family: 'Open Sans', sans-serif;">Studio</span>
+			<span class="sub-flexbox" style="font-family: 'Open Sans', sans-serif;"><span style="font-size: 50pt;">Studio</span></span>
 		</div>
 	</div>
 </body>
