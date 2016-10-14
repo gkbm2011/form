@@ -75,13 +75,13 @@
 	<div style="height:30;"></div>
 	
 <script language="javascript">
-	$('input#submit').prop('disabled', true);
+	$('button#submit').prop('disabled', true);
 	
 	$("input#agree").change(function() {
 		if($(this).prop("checked")){
-			$('input#submit').prop('disabled', false);
+			$('button#submit').prop('disabled', false);
 		}else{
-			$('input#submit').prop('disabled', true);
+			$('button#submit').prop('disabled', true);
 		}
 	});
 
