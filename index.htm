@@ -53,10 +53,8 @@
 			$contents = $iframe.contents();
 		
 		$contents.find('input#submit').click(function(){
-			alert();
+			setInterval(function(){console.log($(this).attr('src'));}, 100);
 		});
-		
-		console.log($contents.find( "form#toPost" ).submit());
 	});
 </script>
 
