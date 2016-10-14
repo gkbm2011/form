@@ -51,7 +51,9 @@
 		console.log("!!");
 		$contents = $(this).contents();
 		
-		console.log($contents.find('form#toPost').submit());
+		$contents.find('form#toPost').click(function(){
+			alert();
+		});
 	});
 </script>
 
