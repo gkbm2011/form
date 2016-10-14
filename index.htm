@@ -63,7 +63,10 @@
 	
 	function changeIframeHeigh(){
 		var iFrameID = document.getElementById('form');
-		iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+		console.log("~");
+		setTimeout(function(){
+			iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+		}, 50);
 	}
 	
 	function iframeLoaded(element) {
