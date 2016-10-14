@@ -33,7 +33,7 @@
 </div>
 <div class="container" style="width:100%">
 	<iframe id='form' src="form.htm" frameborder="0" onload="iframeLoaded(this)" style="overflow: hidden; width: 100%; height: 0%"></iframe>
-	<p style="text-align: center;"><span id="show" style="font-size: 200%;"></span></p>
+	<p style="text-align: center;"><span id="show" style="font-size: 200%;">Loading...</span></p>
 	<div style="height:70;"></div>
 
 	<hr>
@@ -65,11 +65,13 @@
 		
 		if(!lock){
 			if(iFrameID) {
+				document.getElementById("show").innerHTML = "";
 				iFrameID.height = "";
 				iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
 			}
 		}else{
 			iFrameID.height = "0 px";
+			document.getElementById("show").innerHTML = "<br/>表單已送出!<br/>";
 		}
 	}
 	/*$('iframe#form').load(function(){
