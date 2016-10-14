@@ -1,0 +1,220 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>frame</title>
+
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="./js/jquery.js"></script>
+
+<link rel="stylesheet" href="./css/button/css/buttons.css">
+<script type="text/javascript" src="./css/button/js/buttons.js"></script>
+
+<style type="text/css">
+@import "./primer-2.4.0/scss";
+@import "./primer-2.4.0/css/primer.css";
+@import "./primer-2.4.0/css/docs.css";
+</style>
+
+</head>
+
+<body>
+
+<div class="container" style="width:100%">
+<p class="lead">
+  說明
+</p>
+<span>
+<p>特別說明 特別說明 特別說明(因為很重要所以講三次) <br /><br />
+1. 本 Server 主要招生對象為願意熱心參加活動與建設的玩家 不限任何國籍、地點，只要你能連到本 Server (台灣) 
+也不限遊玩經歷、電腦設備等，請自行評估狀況以免到時錄取後無法上線 就 GG 了<br />
+<br />
+2. 本 Server 曾發生過來自某 QQ 群的玩家(Axxxxxxxxx)騷擾與嘗試破壞 Server 運作 基於安全性與其它玩家的公平性 故來自於某 QQ 
+群玩家的申請一概不接受<br />
+<br />
+3. 本報名表各項資料應誠實填寫，請勿使用任何手段(諸如盜帳號 偷圖片)等方式來申請<br />
+<br />
+4. 請不要騷擾本 Server 各個實況主進行關說，大家用公平的方式獲取資格<br />
+<br />
+5. 除了聯繫用的電子郵件與基本要求的資料外 請不要在任何地方透露您自己的私人資訊 保護自己</p>
+
+</span>
+
+<div style="height:70;"></div>
+
+<span class="mustFill">
+*必填</span>
+<form method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdW-4SbERXuXvMOmvGkkQihdaKiPozW-l1KVpzZ9Kl3dVAedg/formResponse" id="toPost">
+	<p><span class="mustFill">* </span><span class="titleStyle">電子郵件 : </span><br/><input class="input-large" type="text" name="emailAddress" id="emailAddress"></p>
+	<p><span class="mustFill">* </span><span class="titleStyle">IGN 遊戲ID : </span><br/>
+		<span>你的 Minecraft 登入帳號，盜版就不必來申請了(有方式可以查得到)，請支持正版！謝謝 <(_ _)> 正版帳號取得方式請參考 Mojang 官網</span><br>
+		<input class="input-large" type="text" name="entry.1328772123" id="ign"></p>
+	<p><span class="mustFill">* </span><span class="titleStyle">接觸MC時間 : </span><br/><input class="input-large" type="text" name="entry.317662243" id="entry.317662243"></p>
+	<p><span class="mustFill">* </span><span class="titleStyle">自介 : </span><br/><textarea  name="entry.1265161385" id="entry.1265161385" ></textarea></p>
+	<p><span class="mustFill">* </span><span class="titleStyle">自行設計過的建設圖片 : </span><br/>
+		<span>各種遊戲內做過的有趣玩意兒都可以，請上傳至圖片空間並放上有效連結，如果您是實況主就附上影片連結吧～</span><br>
+		<textarea  name="entry.1798329672" id="entry.1798329672" ></textarea></p>
+	<p><span class="mustFill">* </span><span class="titleStyle">其他想說的話 : </span><br/><textarea  name="entry.1033121022" id="entry.1033121022" ></textarea></p>
+	<p><span class="mustFill">* </span><span class="titleStyle">可以幫助 Server 哪些項目 : </span><br/><textarea  name="entry.331349248" id="entry.331349248" ></textarea></p>
+	<p>IP : <br><input class="input-large" type="text" name="entry.1146704045" id="hidden_ip"></p>
+	<p>國家 : <br><input class="input-large" type="text" name="entry.1207774333" id="hidden_country"></p>
+	<p>ISP : <br><input class="input-large" type="text" name="entry.371645999" id="hidden_isp"></p>
+	<p style="text-align: center;">
+		<input name="aggree" type="checkbox" id="agree" value="0" />
+		<span class="titleStyle" onclick="$('input#agree')[0].click();">
+			我已填完資料並閱讀特別說明資訊
+		</span>
+	</p>
+	<p style="text-align: center;"><input type="submit" value="提交" name="submit" id="submit" class="button button-rounded button-flat-primary"></p>
+</form>
+
+<div style="height:70;"></div>
+
+	<hr>
+	<div>
+		Copyright MayaCraft 2016
+	</div>
+</div>
+
+<br><br>
+
+<script language="javascript">
+
+	$('input#submit').prop('disabled', true);
+	
+	$("input#agree").change(function() {
+		if($(this).prop("checked")){
+			$('input#submit').prop('disabled', false);
+		}else{
+			$('input#submit').prop('disabled', true);
+		}
+	});
+
+	function isValidEmailAddress(emailAddress) {
+		var pattern = /^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([ \t]*\r\n)?[ \t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([ \t]*\r\n)?[ \t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i;
+		return pattern.test(emailAddress);
+	};
+	
+	
+	var errorMessage = function(id, message){
+		return jQuery('<span/>', {
+			id: id,
+			class : "mustFill",
+			text: message
+		});
+	};
+	
+	function checkEmpty(obj){
+		var name = obj[0].name;
+		if(name == "emailAddress" || name == "entry.1146704045" || name == "entry.1207774333" || name == "entry.371645999"){
+			return true;
+		}
+		
+		var value = obj.val();
+		var errSpanId = "err_" + obj[0].name.split(".")[1];
+		$('span#' + errSpanId).remove();
+		if(value != "" && value != null){
+			obj[0].style.borderColor = "";
+			return true;
+		}else{
+			obj[0].style.borderColor = "red";
+			obj.after(errorMessage(errSpanId, "此欄位是必填欄位，不能留空!"));
+			return false;
+		}
+	}
+	
+	function checkEmail(obj){
+		var name = obj[0].name;
+		if(name != "emailAddress"){
+			return true;
+		}
+	
+		var value = obj.val();
+		$('span#mailError').remove();
+		if(isValidEmailAddress(value)){
+			obj[0].style.borderColor = "";
+			return true;
+		}else{
+			obj[0].style.borderColor = "red";
+			obj.after(errorMessage("mailError", "電子郵件格式不正確!"));
+			return false;
+		}
+	}
+	
+	function postForm(obj){
+		obj.ajaxForm({
+			url: 'server.php',
+			type: 'post',
+			success: function(result){
+				console.log(result);
+			},
+			error: function(t){
+				console.log(t);
+			}
+		});
+	}
+	
+	function getIpInfo(){
+		$.ajax({
+			url: "http://ip-api.com/json",
+			success: function(result){
+				$('input#hidden_ip').val(result.query);
+				$('input#hidden_country').val(result.country + " (" + result.countryCode + ") / " + result.city);
+				$('input#hidden_isp').val(result.isp);
+			},
+			error: function(t){
+				console.log(t);
+			}
+		});
+	}
+	
+	$( window ).load(function() {
+		getIpInfo();
+	});
+
+		
+	$('input#emailAddress').on('input', function(){
+		checkEmail($(this));
+	});
+	
+	$('input[type=text], textarea').on('input', function(){
+		checkEmpty($(this));
+	});
+	
+	$( "form#toPost" ).submit(function( event ) {
+		var error = false;
+		$(this).find('input[type=text], textarea').each(function(){
+			if(!checkEmail($(this))){
+				error = true;
+			}
+			if(!checkEmpty($(this))){
+				error = true;
+			}
+		});
+		
+		if(error){
+			return false;
+		}else{
+			var empty = false;
+			$(this).find('input[id*="hidden_"]').each(function(){
+				if($(this).val() == ""){
+					empty = true;
+				}
+			});
+			if(empty){
+				getIpInfo();
+				$(this).submit();
+				return false;
+			}else{
+				return true;
+			}
+		}
+	});
+</script>
+
+</body>
+
+</html>
