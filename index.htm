@@ -40,11 +40,17 @@
 <br><br>
 
 <script language="javascript">
+	var lock = false;
+	
+	function changeLock(value){
+		lock = value;
+	}
+	
 	function iframeLoaded(element) {
 		var src = document.getElementById("form").src;
 		var iFrameID = document.getElementById('form');
 		
-		if(src == "http://ul.twgg.org/form.htm"){
+		if(!lock){
 			if(iFrameID) {
 				iFrameID.height = "";
 				iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
