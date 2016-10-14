@@ -82,7 +82,6 @@
 <br><br>
 
 <script language="javascript">
-parent.changeLock();
 	$('input#submit').prop('disabled', true);
 	
 	$("input#agree").change(function() {
@@ -209,6 +208,7 @@ parent.changeLock();
 				$(this).submit();
 				return false;
 			}else{
+				parent.changeLock(true);
 				return true;
 			}
 		}
