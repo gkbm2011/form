@@ -66,7 +66,6 @@
 
 	document.getElementById("logos").style.display = "none";
 	document.getElementById("blank").style.display = "none";
-	$("#logos").fadeIn("slow");
 
 	var lock = false;
 	
@@ -97,6 +96,11 @@
 		}else{
 			iFrameID.style.display = "none";
 			document.getElementById("show").innerHTML = "<br/>表單已送出!<br/>";
+			document.getElementById("blank").style.display = "";
+			setTimeout(function(){
+				document.getElementById("blank").style.display = "none";
+				$("#logos").fadeIn(3000);
+			},500);
 		}
 	}
 </script>
