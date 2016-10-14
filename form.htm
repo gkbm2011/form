@@ -68,9 +68,12 @@
 			我已填完資料並閱讀特別說明資訊
 		</span>
 	</p>
-	<p style="text-align: center;"><input type="submit" value="提交" name="submit" id="submit" class="button button-rounded button-flat-primary"></p>
+	<p style="text-align: center; display:none"><input type="submit" value="提交" name="submit" id="post"></p>
 </form>
+	<p style="text-align: center;"><input type="button" value="提交" name="submit" id="submit" class="button button-rounded button-flat-primary"></p>
 
+	<div style="height:30;"></div>
+	
 <script language="javascript">
 	$('input#submit').prop('disabled', true);
 	
@@ -175,9 +178,10 @@
 		checkEmpty($(this));
 	});
 	
-	$( "form#toPost" ).submit(function( event ) {
+	
+	$("input#submit").click(function(){
 		var error = false;
-		$(this).find('input[type=text], textarea').each(function(){
+		$( "form#toPost" ).find('input[type=text], textarea').each(function(){
 			if(!checkEmail($(this))){
 				error = true;
 			}
@@ -187,22 +191,21 @@
 		});
 		
 		if(error){
-			return false;
+			return;
 		}else{
 			var empty = false;
-			$(this).find('input[id*="hidden_"]').each(function(){
+			$( "form#toPost" ).find('input[id*="hidden_"]').each(function(){
 				if($(this).val() == ""){
 					empty = true;
 				}
 			});
+			parent.hindIframe();
 			if(empty){
 				getIpInfo();
-				$(this).submit();
-				return false;
-			}else{
-				parent.hindIframe();
-				return true;
 			}
+			setTimeout(function(){
+				$("input#post").click();
+			}, 700);
 		}
 	});
 </script>
