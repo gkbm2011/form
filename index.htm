@@ -32,7 +32,7 @@
 </div>
 </div>
 <div class="container" style="width:100%">
-	<iframe id='form' src="form.htm" frameborder="0" onload="iframeLoaded()" style="overflow: hidden; width: 100%;"></iframe>
+	<iframe id='form' src="form.htm" frameborder="0" onload="iframeLoaded(this)" style="overflow: hidden; width: 100%;"></iframe>
 </div>
 
 
@@ -40,24 +40,31 @@
 <br><br>
 
 <script language="javascript">
-	function iframeLoaded() {
+	function iframeLoaded(element) {
+		var src = document.getElementById("form").src;
 		var iFrameID = document.getElementById('form');
-		if(iFrameID) {
-            iFrameID.height = "";
-            iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-		}   
-	}
-	$('iframe#form').load(function(){
-		console.log("!!");
-		var $iframe = $(this),
-			$contents = $iframe.contents();
 		
-		$contents.find('input#submit').click(function(){
-			setInterval(function(){
-				console.log(document.getElementById("form").src);
-			}, 100);
-		});
-	});
+		if(src == "form.htm"){
+			if(iFrameID) {
+				iFrameID.height = "";
+				iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+			}
+		}else{
+			iFrameID.height = "0 px";
+		}
+	}
+	/*$('iframe#form').load(function(){
+		var src = document.getElementById("form").src;
+		if(src == "http://ul.twgg.org/form.htm"){
+			console.log("!!");
+			var $iframe = $(this);
+			var $contents = $iframe.contents();
+			
+			$contents.find('input#submit').click(function(){
+				console.log("!");
+			});
+		}
+	});*/
 </script>
 
 </body>
