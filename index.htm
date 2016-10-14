@@ -49,9 +49,10 @@
 	}
 	$('iframe#form').load(function(){
 		console.log("!!");
-		$contents = $(this).contents();
+		var $iframe = $(this),
+			$contents = $iframe.contents();
 		
-		$contents.find('form#toPost').click(function(){
+		$contents.find('input#submit').click(function(){
 			alert();
 		});
 	});
