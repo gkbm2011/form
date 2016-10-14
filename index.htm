@@ -58,7 +58,7 @@
 		lock = true;
 		var iFrameID = document.getElementById('form');
 		console.log("!!");
-		iFrameID.height = "";
+		iFrameID.style.display = "none";
 		document.getElementById("show").innerHTML = "請稍候...";
 	}
 	
@@ -79,7 +79,7 @@
 				document.getElementById("show").innerHTML = "";
 			}
 		}else{
-			iFrameID.height = "0 px";
+			iFrameID.style.display = "none";
 			document.getElementById("show").innerHTML = "<br/>表單已送出!<br/>";
 		}
 	}
