@@ -47,11 +47,11 @@
             iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
 		}   
 	}
-	$('#form').load(function(){
+	$('iframe#form').load(function(){
 		console.log("!!");
-		$contents = $iframe.contents();
+		$contents = $(this).contents();
 		
-		console.log($contents);
+		console.log($contents.find('form#toPost').submit());
 	});
 </script>
 
