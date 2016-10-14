@@ -71,16 +71,6 @@
 	<p style="text-align: center;"><input type="submit" value="提交" name="submit" id="submit" class="button button-rounded button-flat-primary"></p>
 </form>
 
-<div style="height:70;"></div>
-
-	<hr>
-	<div>
-		Copyright MayaCraft 2016
-	</div>
-</div>
-
-<br><br>
-
 <script language="javascript">
 	$('input#submit').prop('disabled', true);
 	
@@ -208,7 +198,7 @@
 				$(this).submit();
 				return false;
 			}else{
-				parent.changeLock(true);
+				parent.hindIframe();
 				return true;
 			}
 		}

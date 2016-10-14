@@ -33,6 +33,16 @@
 </div>
 <div class="container" style="width:100%">
 	<iframe id='form' src="form.htm" frameborder="0" onload="iframeLoaded(this)" style="overflow: hidden; width: 100%;"></iframe>
+	<p style="text-align: center;"><span id="show" style="font-size: 200%;"></span></p>
+	<div style="height:70;"></div>
+
+	<hr>
+	<div>
+		Copyright MayaCraft 2016
+	</div>
+	</div>
+
+	<br><br>
 </div>
 
 
@@ -42,9 +52,11 @@
 <script language="javascript">
 	var lock = false;
 	
-	function changeLock(value){
-		alert();
-		lock = value;
+	function hindIframe(){
+		lock = true;
+		var iFrameID = document.getElementById('form');
+		iFrameID.height = "0 px";
+		document.getElementById("show").innerHTML = "請稍候...";
 	}
 	
 	function iframeLoaded(element) {
