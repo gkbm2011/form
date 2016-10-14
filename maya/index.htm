@@ -36,11 +36,22 @@
 	
 	<p style="text-align: center;"><span id="show" style="font-size: 200%;"><img src="./image/loading.gif"><br>Loading...<br>載入過久?<a href="index.htm">請點此</a></span></p>
 	
+	<div class="use-flexbox" id="logos">
+		<span><div class="mayaLogo"></div></span>
+		<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 50px;margin-right: 50px;">X</span>
+		<span class="gkbLogo">
+			<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 100px;">Studio</span>
+		</span>
+	</div>
+	
+	<div class="use-flexbox" id="blank">
+	</div>
+	
 	<div style="height:70;"></div>
 
 	<hr>
 	<div>
-		Copyright MayaCraft 2016
+		Copyright © MayaCraft & GKB Studio. All rights reserved.
 	</div>
 	</div>
 
@@ -52,6 +63,10 @@
 <br><br>
 
 <script language="javascript">
+
+	$("#logos")[0].hind();
+	$("#blank")[0].hind();
+
 	var lock = false;
 	
 	function hindIframe(){
