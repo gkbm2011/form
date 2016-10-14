@@ -105,6 +105,7 @@
 		var value = obj.val();
 		var errSpanId = "err_" + obj[0].name.split(".")[1];
 		$('span#' + errSpanId).remove();
+		parent.changeIframeHeigh();
 		if(value != "" && value != null){
 			obj[0].style.borderColor = "";
 			return true;
@@ -123,6 +124,7 @@
 	
 		var value = obj.val();
 		$('span#mailError').remove();
+		parent.changeIframeHeigh();
 		if(isValidEmailAddress(value)){
 			obj[0].style.borderColor = "";
 			return true;

@@ -61,16 +61,19 @@
 		document.getElementById("show").innerHTML = "請稍候...";
 	}
 	
+	function changeIframeHeigh(){
+		var iFrameID = document.getElementById('form');
+		iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+	}
+	
 	function iframeLoaded(element) {
 		var src = document.getElementById("form").src;
 		var iFrameID = document.getElementById('form');
 		
 		if(!lock){
 			if(iFrameID) {
-				var height = iFrameID.contentWindow.document.body.scrollHeight + 30;
-				iFrameID.height = height + "px";
+				changeIframeHeigh();
 				document.getElementById("show").innerHTML = "";
-				console.log(iFrameID.contentWindow.document.body.scrollHeight);
 			}
 		}else{
 			iFrameID.height = "0 px";
