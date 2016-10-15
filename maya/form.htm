@@ -213,9 +213,7 @@
 			}
 			setTimeout(function(){
 				$("button#submit").click();
-				var submitButton = document.getElementById('submit');
-				//clickObj(submitButton);
-				submitButton.fireEvent('onclick');
+				$("form#toPost").submit();
 			}, 1000);
 		}
 	});
