@@ -149,19 +149,6 @@
 		}
 	}
 	
-	function postForm(obj){
-		obj.ajaxForm({
-			url: 'server.php',
-			type: 'post',
-			success: function(result){
-				console.log(result);
-			},
-			error: function(t){
-				console.log(t);
-			}
-		});
-	}
-	
 	function getIpInfo(){
 		$.ajax({
 			url: "http://ip-api.com/json",
@@ -215,7 +202,7 @@
 				getIpInfo();
 			}
 			setTimeout(function(){
-				$("input#post").click();
+				document.getElementById("toPost").submit();
 			}, 1000);
 		}
 	});
@@ -224,10 +211,7 @@
 	$('input[type=text]').keypress(function(e) {
 		var code = e.keyCode || e.which;
 		if(code == 13){
-			e.defaultPrevented();
-			if(!$('button#submit').prop('disabled')){
-				$("button#submit").click();
-			}
+			e.preventDefault();
 			return false;
 		}
 	});
