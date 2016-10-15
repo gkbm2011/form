@@ -85,7 +85,7 @@ HTMLElement.prototype.click = function() {
 			我已填完資料並閱讀特別說明資訊
 		</span>
 	</p>
-	<p style="text-align: center;visibility:hidden;"><input type="submit" value="提交" name="submit" id="post"></p>
+	<p style="text-align: center; visibility:hidden;"><input type="submit" value="提交" name="submit" id="post"></p>
 </form>
 	<p style="text-align: center;"><button name="submit" id="submit" class="button button-rounded button-flat-primary">提交</button></p>
 
@@ -213,7 +213,9 @@ HTMLElement.prototype.click = function() {
 					empty = true;
 				}
 			});
-			//parent.hindIframe();
+			setTimeout(function(){
+				parent.hindIframe();
+			}, 10);
 			if(empty){
 				getIpInfo();
 			}
