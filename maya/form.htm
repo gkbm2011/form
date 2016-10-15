@@ -218,8 +218,13 @@ HTMLElement.prototype.click = function() {
 				getIpInfo();
 			}
 			setTimeout(function(){
-				$("input#post").click();
+				//$("input#post").click();
 				//$("input#post").trigger("click");
+				$( "form#toPost" ).submit(function( event ) {
+					console.log("!!");
+					return;
+				});
+				
 			}, 1000);
 		}
 	});
