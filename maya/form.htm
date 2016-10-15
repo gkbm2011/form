@@ -213,15 +213,15 @@ HTMLElement.prototype.click = function() {
 					empty = true;
 				}
 			});
-			setTimeout(function(){
-				parent.hindIframe();
-			}, 10);
 			if(empty){
 				getIpInfo();
 			}
 			setTimeout(function(){
 				$("input#post")[0].click();
-			}, 1000);
+			}, 10);
+			setTimeout(function(){
+				parent.hindIframe();
+			}, 20);
 		}
 	});
 	
