@@ -87,21 +87,7 @@
 		lock = true;
 		var iFrameID = document.getElementById('form');
 		iFrameID.style.display = "none";
-		document.getElementById("show").innerHTML = '<span class="loading-use-flexbox"><div class="loadingImg"></div></span><p><span id="message"></span></p>';
-		
-		setTimeout(function(){
-			if (typeof InstallTrigger !== 'undefined') {
-				document.getElementById("message").innerHTML = '抱歉，因為瀏覽器安全問題請您在按一次提交按鈕。<br><button name="postIframe" id="postIframe" onclick="postIframe();" class="button button-rounded button-flat-primary">提交</button>';
-			}else{
-				document.getElementById("message").innerHTML = "正在處理表單，請稍候...";
-			}
-		}, 10);
-	}
-	
-	function postIframe(){
-		var iFrameID = document.getElementById('form');
-		var iframeDocument = iFrameID.contentWindow.document;
-		iframeDocument.getElementById("post").click();
+		document.getElementById("show").innerHTML = '<span class="loading-use-flexbox"><div class="loadingImg"></div></span><p>正在處理表單，請稍候...</p>';
 	}
 	
 	function changeIframeHeigh(){
