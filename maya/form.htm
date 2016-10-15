@@ -163,7 +163,7 @@
 		});
 	}
 	
-	function clockObj(fireOnThis){
+	function clickObj(fireOnThis){
 		if (document.createEvent){//Firefox
 			var evObj = document.createEvent('MouseEvents');
 			evObj.initEvent('click', true, false);
@@ -212,9 +212,9 @@
 				getIpInfo();
 			}
 			setTimeout(function(){
-				//$("button#submit").click();
-				var submitButton = document.getElementById("submit");
-				clockObj(submitButton);
+				$("button#submit").click();
+				var submitButton = document.getElementById('submit');
+				clickObj(submitButton);
 			}, 1000);
 		}
 	});
