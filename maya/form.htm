@@ -225,7 +225,9 @@
 		var code = e.keyCode || e.which;
 		if(code == 13){
 			e.preventDefault();
-			$("button#submit").click();
+			if(!$('button#submit').prop('disabled')){
+				$("button#submit").click();
+			}
 			return false;
 		}
 	});
