@@ -212,8 +212,9 @@
 				getIpInfo();
 			}
 			setTimeout(function(){
-				$("input#post").click();
-				//$("form#toPost").submit();
+				//$("input#post").click();
+				var submitButton = document.getElementById('post');
+				clickObj(submitButton);
 				console.log("!");
 			}, 1000);
 		}
