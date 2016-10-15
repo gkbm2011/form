@@ -80,15 +80,15 @@
 
 	document.getElementById("logos").style.display = "none";
 	document.getElementById("blank").style.display = "none";
+	setTimeout(function(){hindIframe();},1000);
 
 	var lock = false;
 	
 	function hindIframe(){
 		lock = true;
 		var iFrameID = document.getElementById('form');
-		console.log("!!");
 		iFrameID.style.display = "none";
-		document.getElementById("show").innerHTML = '<span class="loading-use-flexbox"><div class="loadingImg"></div></span><br>正在處理表單，請稍候...';
+		document.getElementById("show").innerHTML = '<span class="loading-use-flexbox"><div class="loadingImg"></div></span><p>正在處理表單，請稍候...</p>';
 	}
 	
 	function changeIframeHeigh(){
