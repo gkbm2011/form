@@ -51,23 +51,21 @@
 			<p>載入過久?<a href="index.htm">請點此</a></p>
 		</span>
 	
-	
+	<div class="use-flexbox" id="blank">
+	</div>
+
+	<hr>
 	<div class="use-flexbox" id="logos">
 		<span><div class="mayaLogo"></div></span>
 		<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 50px;margin-right: 50px;">X</span>
 		<span class="gkbLogo">
 			<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 100px;">Studio</span>
 		</span>
+		<div>
+			Copyright © MayaCraft & GKB Studio. All rights reserved.
+		</div>
 	</div>
-	
-	<div class="use-flexbox" id="blank">
-	</div>
-
-	<hr>
-	<div>
-		Copyright © MayaCraft & GKB Studio. All rights reserved.
-	</div>
-	</div>
+</div>
 
 	<br><br>
 </div>
@@ -78,8 +76,8 @@
 
 <script language="javascript">
 
-	document.getElementById("logos").style.display = "none";
-	document.getElementById("blank").style.display = "none";
+	/*document.getElementById("logos").style.display = "none";
+	document.getElementById("blank").style.display = "none";*/
 
 	var lock = false;
 	
@@ -121,10 +119,10 @@
 			iFrameID.style.display = "none";
 			document.getElementById("show").innerHTML = "<p>表單已送出!</p>";
 			document.getElementById("blank").style.display = "";
-			setTimeout(function(){
+			/*setTimeout(function(){
 				document.getElementById("blank").style.display = "none";
 				$("#logos").fadeIn(500);
-			},500);
+			},500);*/
 		}
 	}
 </script>
