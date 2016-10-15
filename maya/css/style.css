@@ -52,11 +52,14 @@ textarea {
 	display:flex;
 	align-items:center;
 	justify-content:center;
-}
-
-.logDiv{
 	width:100%;
 	height:200px;
+}
+
+.loading-use-flexbox{
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 	
 .gkbLogo{
