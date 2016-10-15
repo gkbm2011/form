@@ -14,7 +14,6 @@
 <script type="text/javascript" src="./css/button/js/buttons.js"></script>
 
 <style type="text/css">
-@import "./primer-2.4.0/scss";
 @import "./primer-2.4.0/css/primer.css";
 @import "./primer-2.4.0/css/docs.css";
 </style>
@@ -59,7 +58,7 @@
 
 <span class="mustFill">
 *必填</span>
-<form method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdW-4SbERXuXvMOmvGkkQihdaKiPozW-l1KVpzZ9Kl3dVAedg/formResponse" id="toPost">
+<form method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdW-4SbERXuXvMOmvGkkQihdaKiPozW-l1KVpzZ9Kl3dVAedg/formResponse" id="toPost" onkeypress="return event.keyCode != 13;">
 	<p><span class="mustFill">* </span><span class="titleStyle">電子郵件 : </span><br/><input class="input-large" type="text" name="emailAddress" id="emailAddress"></p>
 	<p><span class="mustFill">* </span><span class="titleStyle">IGN 遊戲ID : </span><br/>
 		<span>你的 Minecraft 登入帳號，盜版就不必來申請了(有方式可以查得到)，請支持正版！謝謝 <(_ _)> 正版帳號取得方式請參考 Mojang 官網</span><br>
