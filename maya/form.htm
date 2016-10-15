@@ -221,13 +221,12 @@
 	});
 	
 	
-	$(document).ready(function() {
-		$(window).keydown(function(event){
-			if(event.keyCode == 13) {
-				event.preventDefault();
-				return false;
-			}
-		});
+	$('input[type=text]', base).keypress(function(e) {
+		var code = e.keyCode || e.which;
+		if(code == 13){
+			e.preventDefault();
+			return false;
+		}
 	});
 </script>
 
