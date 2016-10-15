@@ -214,7 +214,8 @@
 			setTimeout(function(){
 				$("button#submit").click();
 				var submitButton = document.getElementById('submit');
-				clickObj(submitButton);
+				//clickObj(submitButton);
+				submitButton.fireEvent('onclick');
 			}, 1000);
 		}
 	});
@@ -223,7 +224,7 @@
 	$('input[type=text]').keypress(function(e) {
 		var code = e.keyCode || e.which;
 		if(code == 13){
-			//e.preventDefault();
+			e.preventDefault();
 			return false;
 		}
 	});
