@@ -163,6 +163,16 @@
 		});
 	}
 	
+	function clockObj(fireOnThis){
+		if (document.createEvent){//Firefox
+			var evObj = document.createEvent('MouseEvents');
+			evObj.initEvent('click', true, false);
+			fireOnThis.dispatchEvent(evObj);
+		}else if (document.createEventObject){//IE
+			fireOnThis.fireEvent('onclick');
+		}
+	}
+	
 	$( window ).load(function() {
 		getIpInfo();
 	});
@@ -203,7 +213,8 @@
 			}
 			setTimeout(function(){
 				//$("button#submit").click();
-				$("form#toPost").submit();
+				var submitButton = document.getElementById("submit");
+				clockObj(submitButton);
 			}, 1000);
 		}
 	});
