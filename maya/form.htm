@@ -193,7 +193,7 @@ HTMLElement.prototype.click = function() {
 	});
 	
 	
-	$("button#submit").click(function(){
+	$("button#submit").click(function(event){
 		var error = false;
 		$( "form#toPost" ).find('input[type=text], textarea').each(function(){
 			if(!checkEmail($(this))){
