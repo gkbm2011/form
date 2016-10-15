@@ -192,42 +192,37 @@ HTMLElement.prototype.click = function() {
 		checkEmpty($(this));
 	});
 	
-	
-	$("button#submit").click(function(event){
-		var error = false;
-		$( "form#toPost" ).find('input[type=text], textarea').each(function(){
-			if(!checkEmail($(this))){
-				error = true;
-			}
-			if(!checkEmpty($(this))){
-				error = true;
-			}
-		});
-		
-		if(error){
-			return;
-		}else{
-			var empty = false;
-			$( "form#toPost" ).find('input[id*="hidden_"]').each(function(){
-				if($(this).val() == ""){
-					empty = true;
+	$(document).ready(function() {
+		$("button#submit").click(function(event){
+			var error = false;
+			$( "form#toPost" ).find('input[type=text], textarea').each(function(){
+				if(!checkEmail($(this))){
+					error = true;
+				}
+				if(!checkEmpty($(this))){
+					error = true;
 				}
 			});
-			parent.hindIframe();
-			if(empty){
-				getIpInfo();
-			}
-			setTimeout(function(){
-				//$("input#post").click();
-				//$("input#post").trigger("click");
-				$( "form#toPost" ).submit(function( event ) {
-					console.log("!!");
-					return;
+		
+			if(error){
+				return;
+			}else{
+				var empty = false;
+				$( "form#toPost" ).find('input[id*="hidden_"]').each(function(){
+					if($(this).val() == ""){
+						empty = true;
+					}
 				});
-				
-			}, 1000);
-		}
-	});
+				parent.hindIframe();
+				if(empty){
+					getIpInfo();
+				}
+				setTimeout(function(){
+					$("input#post").trigger("click");
+				}, 1000);
+			}
+		});
+	}
 	
 	
 	$('input[type=text]').keypress(function(e) {
