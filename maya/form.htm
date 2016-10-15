@@ -221,7 +221,8 @@
 	});
 	
 	
-	$('input[type=text]', base).keypress(function(e) {
+	$('input[type=text]').keypress(function(e) {
+		console.log("!!");
 		var code = e.keyCode || e.which;
 		if(code == 13){
 			e.preventDefault();
