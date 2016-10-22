@@ -56,13 +56,26 @@
 		</span>
 
 	<hr>
+	
+	<span id="mobile" style="display:none"><div class="use-flexbox" id="logos">
+		<span><div class="mayaLogo"></div></span>
+	</div>
 	<div class="use-flexbox" id="logos">
+		<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 50px;margin-right: 50px; margin-top: 25px;">X</span>
+	</div>
+	<div class="use-flexbox" id="logos">
+		<span class="gkbLogo">
+			<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 100px;">Studio</span>
+		</span>
+	</div></span>
+	
+	<span id="desktop" style="display:none"><div class="use-flexbox" id="logos">
 		<span><div class="mayaLogo"></div></span>
 		<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 50px;margin-right: 50px;">X</span>
 		<span class="gkbLogo">
 			<span style="font-size: 25pt;font-family: 'Open Sans', sans-serif;margin-left: 100px;">Studio</span>
 		</span>
-	</div>
+	</div></span>
 	
 	<div style="text-align:center;">
 		Copyright © MayaCraft & GKB Studio. All rights reserved.
@@ -80,7 +93,25 @@
 
 	/*document.getElementById("logos").style.display = "none";
 	document.getElementById("blank").style.display = "none";*/
-
+	
+	if(checkMobile() == "pc"){
+		document.getElementById("desktop").style.display = "";
+	}else{
+		document.getElementById("mobile").style.display = "";
+	}
+	
+	function checkMobile(){
+		if (/ipad/i.test(navigator.userAgent.toLowerCase())) {
+			return "ipad";    // 目前是用ipad瀏覽
+		}
+		else if (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())) {
+			return "mobile";  // 目前是用手機瀏覽
+		}
+		else {
+			return "pc";      // 目前是用電腦瀏覽
+		}
+	}
+	
 	var lock = false;
 	
 	function hindIframe(){
